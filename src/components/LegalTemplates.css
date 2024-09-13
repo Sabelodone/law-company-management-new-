@@ -1,0 +1,108 @@
+.legal-templates {
+    display: flex;
+    flex-direction: row; /* Align sidebar and content side by side */
+    padding: 20px;
+    color: #fff; /* Ensure text is readable */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* More depth with shadow */
+    min-height: 100vh; /* Ensure full viewport height */
+  }
+  
+  .sidebar {
+    flex: 1; /* Flex-grow to take up available space */
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for sidebar */
+    margin-right: 20px; /* Space between sidebar and content */
+  }
+  
+  .content {
+    flex: 2; /* Flex-grow to take up more space than sidebar */
+  }
+  
+  .template-card {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Increased shadow for a more dramatic effect */
+    transition: transform 0.2s, box-shadow 0.3s ease;
+    border: none; /* Remove card border */
+    border-radius: 12px; /* Softer card edges */
+  }
+  
+  .template-card:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Stronger shadow on hover */
+  }
+  
+  .template-card .card-body {
+    text-align: center;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05); /* Light inner shadow for a subtle 3D effect */
+  }
+  
+  .template-card .btn {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%); /* Vibrant gradient for button */
+    border: none;
+    color: #fff; /* White text on the button */
+    padding: 12px 24px;
+    border-radius: 40px; /* Extra rounded buttons */
+    font-size: 1.1rem;
+    transition: background 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .template-card .btn:hover {
+    background: linear-gradient(135deg, #feb47b 0%, #ff7e5f 100%); /* Reverse gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slight shadow on hover for effect */
+  }
+  
+  form {
+    background: #f9f9f9; /* Light and soft background for forms */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Deeper shadow for form */
+    color: #333; /* Text color for readability */
+    margin-top: 20px; /* Extra spacing above the form */
+  }
+  
+  form .form-group label {
+    font-weight: 600; /* Make form labels bold */
+  }
+  
+  form .form-control {
+    padding: 10px;
+    font-size: 1rem; /* Slightly larger text for input fields */
+    border-radius: 8px; /* Rounded input fields */
+    border: 1px solid #ddd; /* Light border for inputs */
+  }
+  
+  form .form-control:focus {
+    border-color: #6a11cb; /* Purple border on focus */
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2); /* Glow effect on focus */
+  }
+  
+  form button[type="submit"] {
+    background-color: #6a11cb;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #2575fc; /* Change color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hover effect for submit button */
+  }
+  
+  .container-fluid {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: flex-start; /* Align items to the start of the container */
+  }
+  

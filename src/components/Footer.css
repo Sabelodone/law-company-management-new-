@@ -1,0 +1,37 @@
+/* Footer.css */
+
+footer {
+  background-color: #f8f9fa; /* Light background for contrast */
+  border-top: 2px solid #4b0082; /* Deep indigo border for a luxurious touch */
+  padding: 0.75rem 1rem; /* Reduced padding for a compact layout */
+  text-align: center; /* Center-align text */
+  position: relative; /* Ensure proper layout positioning */
+  font-size: 0.85rem; /* Smaller base font size */
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+  color: #555; /* Dark grey for readability */
+  line-height: 1.4; /* Slightly increased line height for readability */
+}
+
+footer p.mb-1 {
+  font-weight: bold;
+  color: #4b0082; /* Indigo color for emphasis */
+}
+
+footer p.mb-0 {
+  font-weight: normal;
+  color: #777; /* Light grey for secondary information */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem; /* Further reduced padding on smaller screens */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Smaller font size on small screens */
+  }
+}

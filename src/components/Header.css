@@ -1,0 +1,146 @@
+/* General Navbar Styles */
+.navbar {
+  border-bottom: 2px solid #4b0082; /* Indigo border */
+  background-color: #f8f9fa; /* Light background */
+  padding: 1rem 2rem; /* Balanced padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Navbar Brand Styles */
+.navbar-brand {
+  font-weight: 700; /* Bold brand name */
+  color: #4b0082; /* Indigo brand text */
+  font-size: 1.75rem; /* Larger font size */
+}
+
+.navbar-brand:hover {
+  color: #800080; /* Lighter purple on hover */
+}
+
+/* Navbar Link Styles */
+.navbar-nav .nav-link {
+  font-weight: 500; /* Medium font weight */
+  color: #4b0082; /* Indigo nav links */
+  transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
+  padding: 0.5rem 1.5rem; /* Adjusted spacing */
+  margin-right: 0.75rem; /* Space between links */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #800080; /* Lighter purple on hover */
+  background-color: #e9ecef; /* Light grey background on hover */
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler {
+  border-color: #4b0082; /* Indigo border */
+  padding: 0.25rem 0.5rem; /* Sleek look */
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><path stroke="%234b0082" stroke-width="2" d="M5 7h20M5 15h20M5 23h20"/></svg>');
+}
+
+/* Search Bar Styles */
+.form-inline .form-control {
+  max-width: 250px; /* Adjusted width */
+  border-radius: 0; /* Remove default rounded corners */
+}
+
+/* Apply gradient to buttons */
+.btn-outline-indigo, .luxury-modal .btn-primary, .luxury-modal .btn-danger {
+  background: linear-gradient(to right, #6a0dad, #f8c307); /* Gradient background */
+  border: none; /* Remove border */
+  color: #fff; /* White text for better contrast */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline-indigo:hover, .luxury-modal .btn-primary:hover, .luxury-modal .btn-danger:hover {
+  background: linear-gradient(to right, #5a098e, #d8a507); /* Darker gradient on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+  color: #fff;
+}
+
+/* Modal Styles */
+.luxury-modal .modal-content {
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e9e9e9 100%);
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #003366;
+}
+
+.luxury-modal .modal-header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.luxury-modal .modal-title {
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Navigation tabs */
+.luxury-modal .nav-tabs .nav-link {
+  color: #003366;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.luxury-modal .nav-tabs .nav-link.active {
+  border-bottom: 2px solid #003366;
+}
+
+/* Form and buttons */
+.luxury-modal .form-control {
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+  border: 1px solid #003366;
+}
+
+/* Footer and form group spacing */
+.luxury-modal .modal-footer {
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.luxury-modal .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Center profile content */
+.luxury-modal .text-center img {
+  border: 2px solid #003366;
+}
+
+/* Tab content padding */
+.luxury-modal .tab-content {
+  padding-top: 1rem;
+}
+
+/* Add this to your existing CSS */
+img.rounded-circle {
+  border: 2px solid #003366; /* Optional border for luxury look */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center; /* Center-align links on small screens */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.75rem 0; /* Increase padding for touch targets */
+    margin-right: 0; /* Remove side margin */
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: flex-start; /* Align form vertically on small screens */
+    margin-top: 1rem;
+  }
+
+  .form-inline .form-control {
+    width: 100%; /* Full-width search bar on small screens */
+  }
+}

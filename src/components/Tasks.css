@@ -1,0 +1,50 @@
+/* Tasks.css */
+
+h1 {
+    font-weight: bold;
+    color: #4b0082; /* Indigo for a luxurious and professional look */
+    font-family: 'Merriweather', serif; /* Elegant serif font for headings */
+    margin-bottom: 1.5rem; /* Spacing below the heading */
+  }
+  
+  .table {
+    font-size: 0.95rem; /* Base font size for table content */
+    border-collapse: separate; /* Prevent border collapse */
+    border-spacing: 0; /* Remove default spacing */
+    width: 100%; /* Full width of the container */
+  }
+  
+  .table th {
+    font-weight: 700;
+    text-align: center;
+    background-color: #4b0082; /* Deep indigo background */
+    color: #fff; /* White text for contrast */
+    padding: 0.75rem; /* Padding for table headers */
+  }
+  
+  .table td {
+    text-align: center;
+    color: #333; /* Dark grey for readability */
+    padding: 0.75rem; /* Padding for table data */
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(75, 0, 130, 0.05); /* Light indigo for alternating rows */
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(75, 0, 130, 0.1); /* Slightly darker indigo on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+    }
+    
+    .table th, .table td {
+      font-size: 0.85rem; /* Slightly smaller font size for better fit */
+      padding: 0.5rem; /* Reduced padding for smaller screens */
+    }
+  }
+  
