@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Navbar, Nav, Form, FormControl, Button, Modal, Tab, Nav as BootstrapNav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaFilter, FaUser } from 'react-icons/fa';
+import './Header.css'; // Import the CSS file
 
 const Header = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -24,11 +25,11 @@ const Header = () => {
                         <FormControl
                             type="text"
                             placeholder="Search"
-                            className="mr-sm-2 border-radius-0"
+                            className="mr-sm-2 custom-search"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
-                        <Button variant="outline-indigo" className="ml-2">
+                        <Button variant="outline-indigo" className="ml-2 custom-button">
                             <FaFilter />
                         </Button>
                     </Form>

@@ -3,7 +3,7 @@
   border-bottom: 2px solid #4b0082; /* Indigo border */
   background-color: #f8f9fa; /* Light background */
   padding: 1rem 2rem; /* Balanced padding */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: none; /* Remove shadow to eliminate card effect */
 }
 
 /* Navbar Brand Styles */
@@ -24,12 +24,12 @@
   transition: color 0.3s, background-color 0.3s; /* Smooth transitions */
   padding: 0.5rem 1.5rem; /* Adjusted spacing */
   margin-right: 0.75rem; /* Space between links */
-  border-radius: 0.25rem; /* Rounded corners */
+  border-radius: 0; /* Remove rounded corners */
 }
 
 .navbar-nav .nav-link:hover {
   color: #800080; /* Lighter purple on hover */
-  background-color: #e9ecef; /* Light grey background on hover */
+  background-color: transparent; /* Remove background color on hover */
 }
 
 /* Navbar Toggler Styles */
@@ -46,7 +46,21 @@
 .form-inline .form-control {
   max-width: 250px; /* Adjusted width */
   border-radius: 0; /* Remove default rounded corners */
+  border: none; /* Remove border to eliminate card effect */
+  background-color: transparent; /* Make the background transparent */
+  box-shadow: none; /* Remove any shadow */
+  outline: none; /* Remove outline on focus */
+  color: #4b0082; /* Adjust text color if needed */
+  padding: 0.5rem; /* Add some padding for better usability */
 }
+
+/* Search Bar Container */
+.form-inline {
+  display: flex; /* Ensure flex display for alignment */
+  align-items: center; /* Center items vertically */
+  margin: 0; /* Reset margin to remove space around search bar */
+}
+
 
 /* Apply gradient to buttons */
 .btn-outline-indigo, .luxury-modal .btn-primary, .luxury-modal .btn-danger {
@@ -59,15 +73,14 @@
 .btn-outline-indigo:hover, .luxury-modal .btn-primary:hover, .luxury-modal .btn-danger:hover {
   background: linear-gradient(to right, #5a098e, #d8a507); /* Darker gradient on hover */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-  color: #fff;
 }
 
 /* Modal Styles */
 .luxury-modal .modal-content {
   border-radius: 0.5rem;
   background: linear-gradient(135deg, #f0f0f0 0%, #e9e9e9 100%);
-  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #003366;
+  box-shadow: none; /* Remove any card-like shadow */
+  border: none; /* Remove border */
 }
 
 .luxury-modal .modal-header {
