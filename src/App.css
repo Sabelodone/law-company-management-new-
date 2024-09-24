@@ -60,8 +60,9 @@
   flex-grow: 1; /* Allow content area to grow and take available space */
   margin-left: 250px; /* Offset content area to accommodate sidebar */
   transition: margin-left 0.3s ease; /* Smooth transition for responsive layout changes */
-  position: fixed; /* Fix the content area on the screen */
-  top: 60px; /* Adjust this to the height of your navbar */
+  position: absolute; /* Fix the content area on the screen */
+  top: 150px; /* Adjust this to the height of your navbar */
+  
   width: calc(100% - 250px); /* Adjust the width to account for sidebar */
   height: calc(100vh - 60px); /* Full viewport height minus the navbar height */
   overflow-y: auto; /* Scroll within the content area */
