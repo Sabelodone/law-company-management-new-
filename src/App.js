@@ -1,3 +1,5 @@
+// App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
@@ -11,8 +13,9 @@ import Tasks from './components/Tasks';
 import TimeManagement from './components/TimeManagement';
 import Clients from './components/Clients';
 import DocumentManagement from './components/DocumentManagement';
-import LegalTemplates from './components/LegalTemplates'; // Import the new LegalTemplates component
-import Welcome from './components/Welcome'; // Import Welcome component
+import LegalTemplates from './components/LegalTemplates';
+import Welcome from './components/Welcome';
+import CreateCase from './components/CreateCase'; // Import the CreateCase component
 import './App.css';
 
 function App() {
@@ -24,45 +27,44 @@ function App() {
           {/* Sidebar */}
           <Col md={2} className="sidebar d-flex flex-column justify-content-between p-4">
             <Nav className="flex-column">
-              <NavLink 
-                to="/" 
+              <NavLink
+                to="/"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faHome} className="me-2" /> Dashboard
               </NavLink>
-              <NavLink 
-                to="/cases" 
+              <NavLink
+                to="/cases"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faBriefcase} className="me-2" /> Cases
               </NavLink>
-              <NavLink 
-                to="/tasks" 
+              <NavLink
+                to="/tasks"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faTasks} className="me-2" /> Tasks
               </NavLink>
-              <NavLink 
-                to="/time-management" 
+              <NavLink
+                to="/time-management"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faClock} className="me-2" /> Time Management
               </NavLink>
-              <NavLink 
-                to="/clients" 
+              <NavLink
+                to="/clients"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faUsers} className="me-2" /> Clients
               </NavLink>
-              <NavLink 
-                to="/document-management" 
+              <NavLink
+                to="/document-management"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faFileAlt} className="me-2" /> Document Management
               </NavLink>
-              {/* Add Templates Link */}
-              <NavLink 
-                to="/legal-templates" 
+              <NavLink
+                to="/legal-templates"
                 className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
               >
                 <FontAwesomeIcon icon={faFileAlt} className="me-2" /> Templates
@@ -73,15 +75,15 @@ function App() {
           {/* Main Content Area */}
           <Col md={10} className="content-area p-4">
             <Routes>
-              <Route path="/" element={<Welcome />} /> {/* Set Welcome as default */}
+              <Route path="/" element={<Welcome />} />
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/cases" element={<Cases />} />
               <Route path="/tasks" element={<Tasks />} />
               <Route path="/time-management" element={<TimeManagement />} />
               <Route path="/clients" element={<Clients />} />
               <Route path="/document-management" element={<DocumentManagement />} />
-              {/* Add the Templates Route */}
               <Route path="/legal-templates" element={<LegalTemplates />} />
+              <Route path="/create-case" element={<CreateCase />} /> {/* CreateCase route */}
             </Routes>
           </Col>
         </Row>
@@ -97,3 +99,4 @@ function App() {
 }
 
 export default App;
+

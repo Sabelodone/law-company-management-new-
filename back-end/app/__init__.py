@@ -5,6 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_session import Session
 from flasgger import Swagger
+from flask_cors import CORS
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -25,7 +26,11 @@ def create_app():
     db.init_app(app)
     login_manager.init_app(app)
     sess.init_app(app)
-    
+
+    # Initialize CORS, allow requests from react app
+    CORS(app, supports_credentials=True)  # Allow credentials if needed
+    app.config['CORS_HEADERS'] = 'Content-Type'  # Specify allowed headers
+
     # Initialize Swagger with YAML configuration
     swagger = Swagger(app, template_file='swagger.yml')
 
@@ -39,8 +44,8 @@ def create_app():
     #from app.routes.billing import billing_blueprint
     #app.register_blueprint(billing_blueprint, url_prefix='/billing')
 
-    #from app.routes.cases import case_blueprint
-    #app.register_blueprint(case_blueprint, url_prefix='/cases')
+    from app.routes.cases import cases_blueprint
+    app.register_blueprint(cases_blueprint, url_prefix='/api/cases')
 
     from app.routes.customers import customers_blueprint
     app.register_blueprint(customers_blueprint, url_prefix='/customers')

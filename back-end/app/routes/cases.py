@@ -1,32 +1,43 @@
-#app/routes/cases.py
+# /routes/cases.py
 
+import logging
 from flask import Blueprint, request, jsonify
 from app import db
 from app.models import Case
 from flask_login import login_required
 
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
+
 cases_blueprint = Blueprint('cases', __name__)
 
-@cases_blueprint.route('/cases', methods=['POST'])
-@login_required
+@cases_blueprint.route('', methods=['POST'])
+#@login_required
 def create_case():
+    logging.info('Received request to create case') # Log request
     data = request.get_json()
-    # Validation
+    logging.debug(f'Request data: {data}') # Log data received
+
     if not data.get('title') or not data.get('description'):
-        return jsonify({'error': 'Please provide all required fields'}), 400
+        logging.warning('Missing required fields') #More log for failure
+        return jsonify({'error': 'Title and description are required'}), 400
+
+    new_case = Case(
+        title=data['title'],
+        description=data['description']
+    )
+
     try:
-        new_case = Case(
-            title=data['title'],
-            description=data['description']
-        )
         db.session.add(new_case)
         db.session.commit()
-        return jsonify({'message': 'Case created successfully'}), 201
+        logging.info(f'Case created successfully: {new_case}')
+        return jsonify(new_case.to_dict()), 201
     except Exception as e:
-        return jsonify({'error': 'An error occurred: ' + str(e)}), 500
+        logging.error(f'Error creating case: {str(e)}')
+        return jsonify({'error': str(e)}), 500
 
-@cases_blueprint.route('/cases', methods=['GET'])
-@login_required
+@cases_blueprint.route('', methods=['GET'])
+#@login_required
 def get_cases():
     cases = Case.query.all()
     return jsonify([case.to_dict() for case in cases]), 200
