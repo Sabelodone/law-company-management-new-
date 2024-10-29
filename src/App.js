@@ -1,6 +1,6 @@
 // App.js
 
-import React from 'react';
+import React from 'react'; #comment2
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
